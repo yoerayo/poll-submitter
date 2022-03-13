@@ -9,7 +9,6 @@ const puppeteer = require('puppeteer');
   for (var i = 0; i < numberOfQuestions; i++) {
     let selection = await questionContainers[i].evaluateHandle( (el) => {
       let aptoOption = el.querySelector('input[value="Apto Global"]');
-      console.log(`I found an apto option: ${!!aptoOption}`);
       let possibleSelections = el.querySelectorAll('input[type="radio"]');
       return aptoOption || possibleSelections[Math.floor(Math.random() * 2)];
     });

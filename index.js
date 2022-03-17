@@ -3,7 +3,7 @@ const puppeteer = require('puppeteer');
 (async () => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
-  await page.goto('https://www.bizjournals.com/nashville/pulse/survey/nashville-inno-madness-round-two/22050163');
+  await page.goto('https://www.bizjournals.com/nashville/pulse/survey/nashville-inno-madness-last-four/22053922');
   const questionContainers = await page.$$('div[data-field-type="radio"]');
   const numberOfQuestions = questionContainers.length;
   for (var i = 0; i < numberOfQuestions; i++) {
